@@ -1,10 +1,36 @@
-Mango - Mongodb driver with push
-================================
+Guava - Push for database
+=========================
 
-Mango allows you to listen for any changes to any  query so you can save hits to the database, and serve database-driven applications in realtime.
+What are some cool stuff?
+-------------------------
+
+- supports most statements by mongodb
+- 
+
+```javascript
+
+var Guava = require('guava/node');
 
 
-When will you start this awesome idea?
----------------------------------------
+var gva = new Guava(new Guava.Mongo()),
+messages = gva.collection('messages');
 
-Tomorrow, and it will be finished by the weekend. Boomshakalaka. 
+messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
+{
+	//binds to any additions
+	cursor.bind(function(item)
+	{
+		
+	});
+
+	cursor.each(function(err, item)
+	{
+		//do whatever you want here...
+	});
+});
+
+
+//triggers the binding
+messages.insert({ name: 'craig', message: 'hello world!'});
+
+```

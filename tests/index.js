@@ -10,7 +10,7 @@ var Observer = module.exports = Structr({
 	'__construct': function()
 	{
 		this._listeners = [];
-	},
+	}
 
 	/**
 	 */

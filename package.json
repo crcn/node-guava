@@ -9,7 +9,8 @@
     },
     "directories" :   { "lib" : "./lib" },
     "dependencies": {
-        "sk":"*"
+        "sk":"*",
+        "vows":"*"
     },
     
     "main": "./lib/index.js"
