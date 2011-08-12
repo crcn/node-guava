@@ -29,7 +29,7 @@ messages = gva.collection('messages');
 //first find any items with the names: craig, or tim in it.
 messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
 {
-	//first loop through the results
+	//loop through the results
 	cursor.each(function(err, item)
 	{
 		//code here...
@@ -44,7 +44,7 @@ messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
 });
 
 
-//next, insert the first item, triggering the data binding.
+//insert the first item, triggering the data binding.
 messages.insert({ name: 'craig', message: 'hello world!'});
 
 ```
