@@ -7,7 +7,7 @@ What are some cool stuff?
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
-Realworld Examples:
+Real world examples:
 -------------------
 
 - Twitter realtime stream
