@@ -1,8 +1,5 @@
-Guava - realtime driver for databases
-=====================================
-
-What are some cool stuff?
--------------------------
+Guava - Query lister for database drivers
+==========================================
 
 - Listen to any query for inserts before they're sent to the database
 - Saves hits to the database for realtime applications

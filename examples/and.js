@@ -1,23 +1,14 @@
-var Observer = require('../lib/node/observer');
+var guava = require('../lib/node');
 
 
-var obs = new Observer();
+var gva = new guava.Mongo('mongodb://minimacblack.local/test.database'),
+messages = gva.collection('messages');
 
-obs.on({ name: 'craig', age: { $ne : 20 } }, function(data)
+
+messages.find({ name: 'craig' }, function(err, cursor)
 {
-	console.log(data)
+	// console.log(cursor.populate)
+	// console.log(cursor.bind)
 });
 
-obs.emit({ name: 'craig' });
-obs.emit({ name: 'craig', age: 20 });
-obs.emit({ name: 'craig', age: 21 });
-
-
-
-obs.on({ title: 'hello', message: 'world', createdAt: { $gt: new Date(new Date().getTime() - 100 ) }}, function(data)
-{
-	console.log(data);
-})
-
-
-obs.emit({ title: 'hello', message: 'world', createdAt: new Date() });
+messages.insert({ name: 'craig' },function(){});

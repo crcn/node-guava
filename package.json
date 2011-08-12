@@ -10,7 +10,8 @@
     "directories" :   { "lib" : "./lib" },
     "dependencies": {
         "sk":"*",
-        "vows":"*"
+        "vows":"*",
+        "mongoose":"*"
     },
     
     "main": "./lib/index.js"
