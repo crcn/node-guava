@@ -35,14 +35,13 @@ messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
 		//code here...
 	});
 
-	//then *bind* to any additional inserts to the database. this is *not* similar to mongodb's trailing function
+	//then *bind* to any additional inserts to the database. this is *not* similar to mongodb's trailing cursors
 	cursor.bind(function(item)
 	{
 		console.log(item.message);//hello world!
 	});
 
 });
-
 
 //insert the first item, triggering the data binding.
 messages.insert({ name: 'craig', message: 'hello world!'});
