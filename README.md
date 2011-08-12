@@ -1,12 +1,16 @@
-Guava - Push for database
+Guava - Push for mongodb
 =========================
 
 What are some cool stuff?
 -------------------------
 
-- Gives database "push", similar to twitter's realtime stream
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
+
+Realworld Examples:
+-------------------
+
+- Twitter realtime stream
 
 Example:
 --------
