@@ -1,10 +1,10 @@
-Guava - Make your database-driven application realtime
-=========================
+Guava - realtime driver for databases
+=====================================
 
 What are some cool stuff?
 -------------------------
 
-- Listen to any query for inserts before they're sent to the database
+- No more querying the database for any changes. Listen to any query for inserts before they're sent to the database.
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
