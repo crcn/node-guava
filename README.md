@@ -17,31 +17,14 @@ Example:
 
 var guava = require('guava/node');
 
-//wrapper for the driver: Mongo
-var gva = new new guava.Mongo(),
+var obs = new new guava.Observer();
 
-//the messages collection
-messages = gva.collection('messages');
-
-
-//first find any items with the names: craig, or tim in it.
-messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
+obs.on({ name: { $in: ['craig','tim'] } }, function(item)
 {
-	//loop through the results
-	cursor.each(function(err, item)
-	{
-		//code here...
-	});
-
-	//then *bind* to any additional inserts to the database. this is *not* similar to mongodb's trailing cursors
-	cursor.bind(function(item)
-	{
-		console.log(item.message);//hello world!
-	});
+	console.log(item.message);//hello world!
 
 });
 
-//insert the first item, triggering the data binding.
-messages.insert({ name: 'craig', message: 'hello world!'});
+obs.emit({ name: 'craig', message: 'hello world!'});
 
 ```
