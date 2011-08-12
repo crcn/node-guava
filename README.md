@@ -8,6 +8,8 @@ What are some cool stuff?
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
+Example:
+--------
 
 ```javascript
 
@@ -32,7 +34,7 @@ messages.find({ name: { $in: ['craig','tim'] } }, function(err, cursor)
 	//then *bind* to any additional inserts to the database. this is *not* similar to mongodb's trailing function
 	cursor.bind(function(item)
 	{
-		
+		console.log(item.message);//hello world!
 	});
 
 });
