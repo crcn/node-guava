@@ -4,7 +4,7 @@ Guava - realtime driver for databases
 What are some cool stuff?
 -------------------------
 
-- Listen to any query for inserts before they're sent to the database (no more querying for changes).
+- Listen to any query for inserts before they're sent to the database
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
