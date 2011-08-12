@@ -1,9 +1,10 @@
-Guava - Push for mongodb
+Guava - database driver with push / pull
 =========================
 
 What are some cool stuff?
 -------------------------
 
+- Use database queries to listen for any insert made before it's sent to the database
 - Saves hits to the database for realtime applications
 - Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
