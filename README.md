@@ -18,10 +18,10 @@ Example:
 
 ```javascript
 
-var Guava = require('guava/node');
+var guava = require('guava/node');
 
 //wrapper for the driver: Mongo
-var gva = new Guava(new Guava.Mongo()),
+var gva = new new guava.Mongo(),
 
 //the messages collection
 messages = gva.collection('messages');
