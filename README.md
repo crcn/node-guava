@@ -1,4 +1,4 @@
-Guava - Query lister for database drivers
+Guava - Query listener for database drivers
 ==========================================
 
 - Listen to any query for inserts before they're sent to the database
