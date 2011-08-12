@@ -1,0 +1,16 @@
+{
+    "name": "mango",
+    "description": "Push for mongodb",
+    "version": "0.0.1",
+    "author": "Craig Condon",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/spiceapps/mango.git"
+    },
+    "directories" :   { "lib" : "./lib" },
+    "dependencies": {
+        "sk":"*"
+    },
+    
+    "main": "./lib/index.js"
+}
