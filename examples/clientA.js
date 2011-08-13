@@ -22,7 +22,3 @@ hello_c.on({ name: { $in: ['craig', 'tim' ]}, age: { $gt: 20 }}, function(result
 });
 
 
-
-hello_c.emit({ name: 'craig', age: 21 });
-hello_c.emit({ name: 'tim', age: 20 });
-

@@ -13,12 +13,12 @@ Real world examples:
 Server Example:
 ---------------
 
-In Terminal:
+Terminal:
 
 	guava
 
 
-In javascript file:
+Javascript file 1:
 	
 ```javascript
 
@@ -31,6 +31,15 @@ People.on({ name: { $in: ['craig','tim','jake'], age: { $gt : 16 } } }, function
 	//craig is a 9001 year old male
 	console.log('%s is a %d year old %s', person.name, person.gender, person.age);
 });
+
+```
+
+Javascript file 2:
+
+```javascript
+
+var Client = require('guava').Client,
+People = Client.connect().collection('people');
 
 //gets caught
 People.emit({ name: 'craig', gender: 'male', age: 9001 });
