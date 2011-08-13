@@ -10,21 +10,53 @@ Real world examples:
 
 - Twitter realtime stream
 
-Example:
---------
+Server Example:
+---------------
 
+In Terminal:
+
+	guava
+
+
+In javascript file:
+	
 ```javascript
 
-var guava = require('guava/node');
+var Client = require('guava').Client,
+People = Client.connect().collection('people');
 
-var obs = new new guava.Observer();
+People.on({ name: { $in: ['craig','tim','jake'], age: { $gt : 16 } } }, function(person)
+{
+	
+	//craig is a 9001 year old male
+	console.log('%s is a %d year old %s', person.name, person.gender, person.age);
+});
 
-obs.on({ name: { $in: ['craig','tim'] } }, function(item)
+//gets caught
+People.emit({ name: 'craig', gender: 'male', age: 9001 });
+
+//doesn't get caught
+People.emit({ name: 'jake', gender: 'female', age: 14 }); 
+
+```
+
+
+In-App Example:
+---------------
+	
+```javascript
+
+var Observer = require('guava').Observer;
+
+var messages = new Observer(),
+nowNS = new Date().getTime();
+
+messages.on({ name: { $in: ['craig','tim'] }, createdAt: { $gt: new Date(), $lt: new Date(nowNS + 20000)} }, function(item)
 {
 	console.log(item.message);//hello world!
 
 });
 
-obs.emit({ name: 'craig', message: 'hello world!'});
+messages.emit({ name: 'craig', message: 'hello world!', createdAt: new Date(nowNS + 10000)});
 
 ```

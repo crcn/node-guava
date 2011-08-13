@@ -1,0 +1,7 @@
+#!/usr/bin/env node    
+
+require('colors');
+
+require('../lib/node/server').start();
+                                                  
+console.log('Running Guava server'.green);
