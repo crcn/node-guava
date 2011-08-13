@@ -1,9 +1,9 @@
-Guava - Query listener for database drivers
-==========================================
+Guava - EventEmitter for database queries
+=========================================
 
 - Listen to any query for inserts before they're sent to the database
 - Saves hits to the database for realtime applications
-- Supports mongodb statements: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
+- Modeled after mondodb, and supports: $all, $exists, $mod, $ne, $in, $nin, $nor, $or, $and, $size
 
 Real world examples:
 -------------------
@@ -49,14 +49,14 @@ In-App Example:
 var Observer = require('guava').Observer;
 
 var messages = new Observer(),
-nowNS = new Date().getTime();
+nowMS = new Date().getTime();
 
-messages.on({ name: { $in: ['craig','tim'] }, createdAt: { $gt: new Date(), $lt: new Date(nowNS + 20000)} }, function(item)
+messages.on({ name: { $in: ['craig','tim'] }, createdAt: { $gt: new Date(), $lt: new Date(nowMS + 20000)} }, function(item)
 {
 	console.log(item.message);//hello world!
 
 });
 
-messages.emit({ name: 'craig', message: 'hello world!', createdAt: new Date(nowNS + 10000)});
+messages.emit({ name: 'craig', message: 'hello world!', createdAt: new Date(nowMS + 10000)});
 
 ```
