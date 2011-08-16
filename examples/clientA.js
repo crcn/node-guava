@@ -6,7 +6,7 @@ var hello_c = connection.collection('hello');
 
 
 //simple enough
-var disp = hello_c.on({ name: 'craig' }, function(result)
+var disp = hello_c.on({ name: /\w+/ }, function(result)
 {
 	disp.dispose();
 	console.log(result)
