@@ -16,10 +16,10 @@
         "structr":"*",
         "vows":"*",
         "colors":"*",
-        "socket.io" : ">=0.6.1 <0.7",
-        "lazy" : ">=1.0.5 <1.1",
+        "socket.io" : "*",
+        "lazy" : "*",
         "traverse" : "*",
-        "dnode-protocol" : ">=0.0.12 <0.1"
+        "dnode-protocol" : "*"
     },
     
     "main": "./lib/node/index.js"
