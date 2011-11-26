@@ -2,7 +2,22 @@
 	"folders":
 	[
 		{
-			"path": "/Users/craig/.cupboard/projects/guava"
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name":"cbd make",
+			"cmd":["cbd","make","guava"]
+		},
+		{
+			"name":"cbd start",
+			"cmd":["cbd","start","guava"]
+		},
+		{
+			"name":"cbd make+start",
+			"cmd":["cbd","make+start","guava"]
 		}
 	]
 }
