@@ -1,26 +1,27 @@
 {
-    "name": "guava",
-    "description": "Push for mongodb",
-    "version": "0.0.5",
-    "author": "Craig Condon",
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/crcn/mango.git"
-    },
-    "bin": {
-        "guava": "./bin/server"
-    },
-    "directories" :   { "lib" : "./lib" },
-    "dependencies": {
-        "sk":"*",
-        "structr":"*",
-        "vows":"*",
-        "colors":"*",
-        "socket.io" : "*",
-        "lazy" : "*",
-        "traverse" : "*",
-        "dnode-protocol" : "*"
-    },
-    
-    "main": "./lib/node/index.js"
+  "name": "guava",
+  "description": "Push for mongodb",
+  "version": "0.0.5",
+  "author": "Craig Condon",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/crcn/mango.git"
+  },
+  "bin": {
+    "guava": "./bin/server"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "sk": "*",
+    "structr": "*",
+    "vows": "*",
+    "colors": "*",
+    "socket.io": "*",
+    "lazy": "*",
+    "traverse": "*",
+    "dnode-protocol": "*"
+  },
+  "main": "./lib/node/index.js"
 }
